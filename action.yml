@@ -11,7 +11,7 @@ inputs:
   lstn-params:
     description: 'Additional parameters to pass to lstn'
   rules-file:
-    description: 'The yaml file containing the lstn policies to enforce'
+    description: 'The yaml file containing the lstn rules to enforce policy'
     default: 'rules.yml'
   rule-name:
     description: 'The name of the rule to enforce'

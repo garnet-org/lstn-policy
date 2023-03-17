@@ -23,9 +23,6 @@ steps:
 steps:
   - uses: garnet-org/lstn-gh-action@0.0.1
     with:
-      # The Github API token.
-      # Defaults to ${{ github.token }}
-      token: "..."
       # The working directory relative to the root one.
       # Defaults to the root directory.
       workdir: "."
@@ -44,16 +41,19 @@ Uses `rules.yml` in the root directory.
 steps:
   - uses: garnet-org/lstn-gh-action@0.0.1
     with:
-      # The Github API token.
-      # Defaults to ${{ github.token }}
-      token: "..."
       # The working directory relative to the root one.
       # Defaults to the root directory.
       workdir: "."
       # The lstn command to execute
       # Defaults to 'scan'
       lstn-command: 'scan'
-          apply-policy: true
-          rules-file: 'rules.yml'
-          rule-name: 'ignore_priority_medium'
+      # The option to apply policy
+      # Default is not set
+      apply-policy: true
+      # The rules file to use
+      # Defaults to './rules.yml'
+      rules-file: 'rules.yml'
+      # The name of the rule to enforce
+      # Defaults to 'ignore_priority_medium'
+      rule-name: 'ignore_priority_medium'
 ```
