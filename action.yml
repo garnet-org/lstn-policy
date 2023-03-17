@@ -1,0 +1,39 @@
+name: 'listen.dev action'
+author: 'Garnet Labs'
+description: 'Monitor and control the behavior of your dependencies in CI'
+inputs:
+  lstn-command:
+    description: 'The lstn command to run'
+    default: 'scan'
+  workdir:
+    description: 'The input directory for the project'
+    default: '.'
+  lstn-params:
+    description: 'Additional parameters to pass to lstn'
+  rules-file:
+    description: 'The yaml file containing the lstn policies to enforce'
+    default: 'rules.yml'
+  rule-name:
+    description: 'The name of the rule to enforce'
+    default: 'ignore_priority_medium'
+  apply-policy:
+    description: 'Whether to enforce lstn policy or not'
+  output-format:
+    description: 'Output format for lstn summary (html, markdown, none)'
+    default: 'markdown'
+branding:
+  color: "green"
+  icon: "alert-octagon"
+runs:
+  using: 'docker'
+  image: 'docker://garnetlabs/lstn:0.3.0-action'
+  entrypoint: '/docker-entrypoint.sh'
+  args:
+    # - lstn
+    - ${{ inputs.lstn-command }}
+    - ${{ inputs.workdir }}
+    - ${{ inputs.lstn-args }}
+  env:
+    INPUT_APPLY_POLICY: ${{ inputs.apply-policy }}
+    INPUT_RULES_FILE: ${{ inputs.rules-file }} 
+    INPUT_RULE_NAME: ${{ inputs.rule-name }}
