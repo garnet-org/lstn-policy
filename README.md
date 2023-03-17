@@ -12,7 +12,7 @@ See [action.yml](action.yml).
 
 ```yaml
 steps:
-  - uses: listendev/action@v1
+  - uses: garnet-org/lstn-gh-action@0.0.1
 ```
 
 ### Workflows
