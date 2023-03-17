@@ -18,9 +18,6 @@ inputs:
     default: 'ignore_priority_medium'
   apply-policy:
     description: 'Whether to enforce lstn policy or not'
-  output-format:
-    description: 'Output format for lstn summary (html, markdown, none)'
-    default: 'markdown'
 branding:
   color: "green"
   icon: "alert-octagon"
