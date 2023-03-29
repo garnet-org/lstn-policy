@@ -18,7 +18,7 @@ inputs:
     default: 'ignore_priority_medium'
   apply-policy:
     description: 'Whether to enforce lstn policy or not'
-    default: true
+    default: 'true'
 branding:
   color: "green"
   icon: "alert-octagon"
