@@ -1,6 +1,6 @@
 name: 'listen.dev policy'
 author: 'Garnet Labs'
-description: 'Monitor and control the behavior of your dependencies in CI'
+description: 'Control the behavior of your dependencies in CI using listen.dev'
 inputs:
   lstn-command:
     description: 'The lstn command to run'
