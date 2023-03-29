@@ -1,4 +1,4 @@
-name: 'listen.dev action'
+name: 'listen.dev policy'
 author: 'Garnet Labs'
 description: 'Monitor and control the behavior of your dependencies in CI'
 inputs:
