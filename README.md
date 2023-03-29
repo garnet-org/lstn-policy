@@ -1,7 +1,7 @@
-# lstn-gh-action
-version: 0.0.1 (pre-release)
+# lstn Policy
+version: 0.0.2 (pre-release)
 
-> Monitor and control the behavior of dependencies
+> Enforce rule-based policies to control the behavior of your dependencies using listen.dev
 
 
 ## Usage
@@ -12,7 +12,7 @@ See [action.yml](action.yml).
 
 ```yaml
 steps:
-  - uses: garnet-org/lstn-gh-action@0.0.1
+  - uses: garnet-org/lstn-policy@0.0.2
 ```
 
 ### Workflows
@@ -21,7 +21,7 @@ steps:
 
 ```yaml
 steps:
-  - uses: garnet-org/lstn-gh-action@0.0.1
+  - uses: garnet-org/lstn-policy@0.0.2
     with:
       # The working directory relative to the root one.
       # Defaults to the root directory.
@@ -39,7 +39,7 @@ Uses `rules.yml` in the root directory.
 ```yaml
 
 steps:
-  - uses: garnet-org/lstn-gh-action@0.0.1
+  - uses: garnet-org/lstn-policy@0.0.2
     with:
       # The working directory relative to the root one.
       # Defaults to the root directory.
