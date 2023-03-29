@@ -12,7 +12,7 @@ See [action.yml](action.yml).
 
 ```yaml
 steps:
-  - uses: garnet-org/lstn-policy@0.0.2
+  - uses: garnet-org/lstn-policy@v0.0.3
 ```
 
 ### Workflows
@@ -21,7 +21,7 @@ steps:
 
 ```yaml
 steps:
-  - uses: garnet-org/lstn-policy@0.0.2
+  - uses: garnet-org/lstn-policy@v0.0.3
     with:
       # The working directory relative to the root one.
       # Defaults to the root directory.
@@ -39,7 +39,7 @@ Uses `rules.yml` in the root directory.
 ```yaml
 
 steps:
-  - uses: garnet-org/lstn-policy@0.0.2
+  - uses: garnet-org/lstn-policy@v0.0.3
     with:
       # The working directory relative to the root one.
       # Defaults to the root directory.
