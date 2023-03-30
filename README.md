@@ -42,4 +42,4 @@ steps:
       # Defaults to 'ignore_priority_medium'
       rule-name: 'ignore_priority_medium'
 ```
-See [docs](https://docs.listen.dev/lstn-github-action/policy) for a detailed guide rules and policy enforcement. 
+See [docs](https://docs.listen.dev/lstn-github-action/policies) for a detailed guide rules and policy enforcement. 
