@@ -1,0 +1,39 @@
+rules:
+  # based on priority levels
+  - name: block_priority_medium
+    query: .[] | select(.verdicts[]?.priority == "medium")
+
+  - name: ignore_priority_medium
+    query: .[] | select(.verdicts[]?.priority == "medium")
+    behavior: ignore
+
+  - name: block_priority_critical
+    query: .[] | select(.verdicts[]?.priority == "critical")
+
+  # based on activity
+  - name: block_network_connection
+    query: .[] | .verdicts[]? | select(.message == "unexpected outbound connection destination")
+
+  - name: ignore_network_connection
+    query: .[] | .verdicts[]? | select(.message == "unexpected outbound connection destination")
+    behavior: ignore
+
+  - name: block_process_spawn
+    query: .[] | .verdicts[]? | select(.message == "npm install spawned a process")
+
+  - name: ignore_process_spawn
+    query: .[] | .verdicts[]? | select(.message == "npm install spawned a process")
+    behavior: ignore
+    
+  - name: ignore_node_gyp_execution
+    query: .[] | .verdicts[]? | select(.metadata.commandline | contains("node-gyp"))
+    behavior: ignore
+    
+  - name: block_node_gyp_execution
+    query: .[] | .verdicts[]? | select(.metadata.commandline | contains("node-gyp"))
+    
+  # based on specified packages (replace package name and version with desired condition)
+  
+  - name: ignore_specific_package_and_version
+    query: .[] | select(.name == "<package-name>" and .version == "<package-version>")
+    behavior: ignore
