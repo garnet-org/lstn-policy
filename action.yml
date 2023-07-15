@@ -21,7 +21,7 @@ inputs:
     default: 'true'
 branding:
   color: "green"
-  icon: "alert-octagon"
+  icon: "docs/garnet-logo.png"
 runs:
   using: 'docker'
   image: 'docker://garnetlabs/lstn:0.3.0-action'
